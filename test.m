@@ -9,14 +9,8 @@ figure
 plot(x,y);
 hold on;
 [x,y] = Plotter(4,3000);
-plot(x,y);
-[x,y] = Plotter(8,2000);
-plot(x,y);
-[x,y] = Plotter(12,1000);
-plot(x,y);
-legend ('x_1','x_2','x_3','x_4','x_1 lin','x_2 lin','x_3 lin','x_4 lin')
-grid on;
-axis([0 21 0 1])
+paijsdp;
+
 epsilon = 0.1;
 %rpm = [single(max(500,states.RPM_FL)),single(max(500,states.RPM_FR)),single(max(500,states.RPM_RL)),single(max(500,states.RPM_RR))];
 eta_slope = zeros(1,size(x_0,1))'
