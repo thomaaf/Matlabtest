@@ -4,21 +4,8 @@ eff_rpm_break = single([500,1000,2000,3000,4000,6000,10000,12000,15000,21000]);
 eff_torque_break = single([1.3,2.7,5.4,7.9,10.4,12.5,14.4,16.0,17.4,18.5,19.6]);
 x_0 = single([5,4,8,12]');
 rpm = single([1500, 3000, 2000, 1000]);
-figure
-[x,y] = Plotter(5,1500);
-plot(x,y);
-hold on;
-[x,y] = Plotter(4,3000);
-paijsdp;
-
-epsilon = 0.1;
-%rpm = [single(max(500,states.RPM_FL)),single(max(500,states.RPM_FR)),single(max(500,states.RPM_RL)),single(max(500,states.RPM_RR))];
-eta_slope = zeros(1,size(x_0,1))'
-for i = 1:size(x_0,1)
-    threepoint =  x_0(i)-epsilon:epsilon:x_0(i)+epsilon;
-    rpm_i = single(rpm(i)*ones(1,size(threepoint,2 )));
-    eta = interp2(eff_rpm_break,eff_torque_break,motor_eff_table, rpm_i,threepoint)/100;
-    delta_x = threepoint(end)- threepoint(1);
+figureasdasd_break,motor_eff_table, rpm_i,threepoint)/100;
+    delta_x = threepoint(end)- threepoint(1);a
     delta_eta = eta(end) - eta(1);
     slope = delta_eta / delta_x;
     eta_slope(i) = slope;
